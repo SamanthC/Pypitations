@@ -1,4 +1,54 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+
+conf_matrix_mit = pd.DataFrame(
+    np.array(
+        [
+            [17677, 218, 127, 78, 18],
+            [69, 444, 10, 5, 1],
+            [47, 5, 1362, 25, 9],
+            [9, 3, 13, 137, 0],
+            [43, 4, 17, 0, 1544]
+        ]
+    )
+)
+
+conf_matrix_mit.columns = ["predict_0", "predict_1", "predict_2", "predict_3", "predict_4"]
+
+conf_matrix_ptb = pd.DataFrame(
+    np.array(
+        [
+            [790, 51],
+            [107, 1963]
+        ]
+    )
+)
+
+conf_matrix_ptb.columns = ["predict_0", "predict_1"]
+
+
+report_mit = pd.DataFrame(
+    [
+        ["0.99", "0.98", "0.98"],
+        ["0.66", "0.80", "0.72"],
+        ["0.89", "0.94", "0.92"],
+        ["0.56", "0.85", "0.67"],
+        ["0.98", "0.96", "0.97"]
+    ]
+)
+
+report_mit.columns = ["précision", "rappel", "f1-score"]
+
+report_ptb = pd.DataFrame(
+    [
+        ["0.88", "0.94", "0.91"],
+        ["0.97", "0.95", "0.96"],
+    ]
+)
+
+report_ptb.columns = ["précision", "rappel", "f1-score"]
+
 
 def modelisation():
     st.header("Modélisation")
@@ -60,16 +110,16 @@ def modelisation():
         """
     )
 
-    col11, col12 = st.columns(2)
+    st.write("- Matrice de confusion et rapport des métriques du dataset MIT test")
+    st.table(conf_matrix_mit)
+    st.table(report_mit)
 
-    with col11:
-        st.image("streamlit/images/image10.png")
-
-    with col12:
-        st.image("streamlit/images/image4.png", width = 150)
+    st.write("- Matrice de confusion et rapport des métriques du dataset PTB")
+    st.table(conf_matrix_ptb)
+    st.table(report_ptb)
     
     st.write(
         """
-        C'est ce modèle qui sera utilisé dans la démonstration à suivre.
+        **C'est ce modèle qui sera utilisé dans la démonstration à suivre.**
         """
     )
