@@ -21,7 +21,7 @@ def contexte():
     # Présentation du coeur
     st.header("Introduction du sujet")
     st.subheader("Qu'est ce que le coeur?")
-    st.image("images/image33.jpg", caption = "Fonctionnement du coeur")
+    st.image("streamlit/images/image33.jpg", caption = "Fonctionnement du coeur")
     st.markdown("Le coeur, **organe vital**, assure la circulation du sang :")
     st.markdown("Chaque jour, il effectue quelques 100 000 battements.")
     st.markdown("Véritable moteur, il est constitué de 2 coeurs :")
@@ -32,8 +32,8 @@ def contexte():
     
     # Explication ECG
     st.subheader("Qu'est ce qu'un électrocardiogramme (ECG)")
-    st.image("images/image34.png", caption = "Exemples d'ECGs")
-    st.image("images/image_ecg.png", caption = "Décomposition d'un ECG")
+    st.image("streamlit/images/image34.png", caption = "Exemples d'ECGs")
+    st.image("streamlit/images/image_ecg.png", caption = "Décomposition d'un ECG")
     st.markdown("L'ECG enregistre une succession de séquences de l'activité électrique du coeur, représentées par des ondes nommées P, QRS et T où :")
     st.markdown("- *l’onde P est celle des oreillettes au moment de leur contraction,*")
     st.markdown("- *l’ensemble QRS correspond à la contraction des ventricules,*")
@@ -60,4 +60,4 @@ def contexte():
     st.video(data="https://www.youtube.com/watch?v=cSugcAq61S0")
     st.markdown("Une vidéo vulgarisant le fonctionnement du coeur")
     st.video(data="https://www.youtube.com/watch?v=s7SuTXiGupQ")
->>>>>>> CBy
+
