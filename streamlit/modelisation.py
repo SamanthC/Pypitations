@@ -8,7 +8,7 @@ def modelisation():
     st.write(
         """
         Dans un premier temps nous avons testé deux algorithmes de Machine Learning \
-        classiques avec le dataset MIT : la régression linéaire et le Support Vector \
+        classiques avec le dataset MIT : la régression logistique et le Support Vector \
         Machine. Au vu du déséquilibre des classes, nous avons tester ces algorithmes \
         après entrainement sur le dataset train tel quel, puis sur le data set train \
         ré-équilibré via undersampling
