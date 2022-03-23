@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+# Définition des matrices de confusion et les rapports de classifications pour les 2 datasets
+
 conf_matrix_mit = pd.DataFrame(
     np.array(
         [
@@ -27,7 +29,6 @@ conf_matrix_ptb = pd.DataFrame(
 
 conf_matrix_ptb.columns = ["predict_0", "predict_1"]
 
-
 report_mit = pd.DataFrame(
     [
         ["0.99", "0.98", "0.98"],
@@ -51,8 +52,10 @@ report_ptb.columns = ["précision", "rappel", "f1-score"]
 
 
 def modelisation():
+    # Titre de la page
     st.header("Modélisation")
 
+    # Sous-Titre 1
     st.subheader("La démarche globale")
     
     st.write(
@@ -69,6 +72,8 @@ def modelisation():
         - nous avons d'abord testé un simple modèle de réseaux de neurones à 4 couches :
         """
     )
+
+    # Centrage de l'image
     col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.write(' ')
@@ -82,6 +87,7 @@ def modelisation():
         """
     )
 
+    # Centrage de l'image
     col5, col6, col7, col8, col9, col10= st.columns(6)
     with col5:
         st.write(' ')
@@ -101,6 +107,7 @@ def modelisation():
 
     st.image("streamlit/images/image_cwt.png", width = 1000)
 
+    # Sous-Titre 2
     st.subheader("Le modèle choisi")
 
     st.write(
@@ -110,10 +117,12 @@ def modelisation():
         """
     )
 
+    # KPI du dataset MIT
     st.write("- Matrice de confusion et rapport des métriques du dataset MIT test")
     st.table(conf_matrix_mit)
     st.table(report_mit)
 
+    # KPI du dataset PTB
     st.write("- Matrice de confusion et rapport des métriques du dataset PTB")
     st.table(conf_matrix_ptb)
     st.table(report_ptb)

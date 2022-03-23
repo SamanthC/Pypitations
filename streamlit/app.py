@@ -7,7 +7,7 @@ from conclusion import conclusion
 
 def main():
     
-    menu_list = ["Le projet PyPitation", "Exploration des données", "Modelisation", "Démonstration", "Conclusion et Ouverture"]
+    menu_list = ["Le projet PyPitations", "Exploration des données", "Modelisation", "Démonstration", "Conclusion et Ouverture"]
 
     menu = st.sidebar.radio("Sommaire", menu_list)
     if menu == menu_list[0]:
