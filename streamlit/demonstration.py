@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Import du modèle
-model = keras.models.load_model("models/CNN_1")
+model = keras.models.load_model("models/CNN_1.h5")
 
 # Import des données du dataset MIT test
 
