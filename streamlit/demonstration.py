@@ -25,7 +25,7 @@ dictionnaire = {
 def demonstration():
     st.header("Démonstration")
     st.write("Nous allons tester notre réseau de neurones convolutionnel avec des exemples du dataset MIT test : ")
-    st.subheader("Séléction de l'ECG")
+    st.subheader("Sélection de l'ECG")
 
     # Saisie de l'ECG qui sera tracé et classifié
     index = st.text_input("Veuillez rentrer un nombre entre 0 et 21892 :")
