@@ -2,6 +2,8 @@ import streamlit as st
 from tensorflow import keras
 import pandas as pd
 import matplotlib.pyplot as plt
+import time
+
 
 # Import du modèle
 model = keras.models.load_model("models/CNN_1.h5")
@@ -23,8 +25,9 @@ dictionnaire = {
 }
 
 def demonstration():
+
     st.header("Démonstration")
-    st.write("Nous allons tester notre réseau de neurones convolutionnel avec des exemples du dataset MIT test : ")
+    st.write("Nous allons tester notre réseau de neurones de convolution avec des exemples du dataset MIT test : ")
     st.subheader("Sélection de l'ECG")
 
     # Saisie de l'ECG qui sera tracé et classifié
@@ -36,25 +39,40 @@ def demonstration():
         fig = plt.figure(figsize = (10,5))
         plt.plot(X_test.iloc[int(index),:])
         st.pyplot(fig)
-        
-        st.subheader("Prédiction du modèle")
-        
-        # Boutton pour déclancher la classification
-        button = st.button("Prédire la classe de l'éléctrocardiogramme")
 
         # Variables de la classe prédite et la classe réelle
         pred = int(model.predict(X_test.iloc[int(index):int(index)+1,:]).argmax(1))
-        reel = int(y_test.iloc[int(index)])
+        pred_proba = int(model.predict(X_test.iloc[int(index):int(index)+1,:]).max()*100)
+        reel = int(y_test.iloc[int(index)])        
+        
+        st.subheader("Prédiction du modèle")
 
-        # Affichage du résultat une fois le boutton appuyé
-        if button:
-            st.markdown("La classe prédite par le modèle est **{} : {}**".format(pred, dictionnaire[pred]))
-            st.markdown("La classe réelle de l'ECG est **{} : {}**".format(reel, dictionnaire[reel]))
+        button1 = st.button("Prédire la classe de l'éléctrocardiogramme")
 
-            if pred == reel :
-                st.success("Le modèle a prédit la bonne classe!")
+        if st.session_state.get('button') != True:
+
+            st.session_state['button'] = button1
+
+        if st.session_state['button'] == True:
+
+            st.markdown("La classe prédite par le modèle est **{} : {}**." \
+                .format(pred, dictionnaire[pred]))
+
+            st.markdown("Probabilité de la classe prédite :")
+
+            if pred_proba > 90 :
+                st.success("La probabilité de la classe prédite est de **{}%**!".format(pred_proba))
             else:
-                st.error("Le modèle n'a pas prédit la bonne classe!")
+                st.warning("Attention! La probabilité de la classe prédite est de **{}%**. Le diagnostic \
+                    doit être validé par un expert".format(pred_proba))
 
+            if st.button('Découvrir la classe réelle'):
 
+                st.markdown("La classe réelle de l'ECG est **{} : {}**".format(reel, dictionnaire[reel]))
 
+                if pred == reel :
+                    st.success("Le modèle a prédit la bonne classe!")
+                else:
+                    st.error("Le modèle n'a pas prédit la bonne classe!")
+
+                st.session_state['button'] = False

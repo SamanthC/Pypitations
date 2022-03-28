@@ -79,11 +79,11 @@ def modelisation():
         st.write(' ')
 
     with col2:
-        st.image("streamlit/images/image26.png", width = 300)
+        st.image("streamlit/images/image26.png", width = 300, caption = "Réseau de neurones artificiel")
 
     st.write(
         """
-        - dans un deuxième temps, nous avons testé un réseau de neurones convolutionel assez simple :  
+        - dans un deuxième temps, nous avons testé un réseau de neurones de convolution assez simple :  
         """
     )
 
@@ -93,7 +93,7 @@ def modelisation():
         st.write(' ')
 
     with col6:
-        st.image("streamlit/images/image8.png", width = 500)
+        st.image("streamlit/images/image8.png", width = 500, caption = "Réseau de neurones de convolution")
 
     st.write(
         """
@@ -105,7 +105,7 @@ def modelisation():
         """
     )
 
-    st.image("streamlit/images/image_cwt.png", width = 1000)
+    st.image("streamlit/images/image_cwt.png", width = 1000, caption = "Transformation d'un signal en image via CWT")
 
     # Sous-Titre 2
     st.subheader("Le modèle choisi")
