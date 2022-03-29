@@ -4,10 +4,16 @@ from modelisation import modelisation
 from exploration import exploration
 from demonstration import demonstration
 from conclusion import conclusion
+from biblio import biblio
 
 def main():
     
-    menu_list = ["Le projet PyPitations", "Exploration des données", "Modelisation", "Démonstration", "Conclusion et Ouverture"]
+    menu_list = ["Le projet PyPitations", 
+                 "Exploration des données", 
+                 "Modelisation", 
+                 "Démonstration", 
+                 "Conclusions et perspectives", 
+                 "Etat de l'art et bibliographie"]
 
     menu = st.sidebar.radio("Sommaire", menu_list)
     if menu == menu_list[0]:
@@ -18,8 +24,10 @@ def main():
         modelisation()
     elif menu == menu_list[3]:
         demonstration()
-    else:
+    elif menu == menu_list[4]:
         conclusion()
+    else:
+        biblio()
 
 if __name__ == "__main__":
     main()
