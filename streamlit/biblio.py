@@ -4,10 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import RendererAgg
 
-tab_doc = pd.read_csv('data/tab_article.csv', sep = ';')
-
-
 def biblio():
+    tab_doc = pd.read_csv('data/tab_article.csv', sep = ';')
     st.header("Etat de l'art et bibliographie")
     st.write(
     """
