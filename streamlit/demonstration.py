@@ -49,7 +49,7 @@ def demonstration():
         st.subheader("Prédiction du modèle")
 
         # Bouton pour lancer la prédiction (session state pour ne pas enlever l'output du 1er bouton quand le 2e est cliqué)
-        button1 = st.button("Prédire la classe de l'éléctrocardiogramme")
+        button1 = st.button("Prédire la classe de l'électrocardiogramme")
 
         if st.session_state.get('button') != True:
             st.session_state['button'] = button1
