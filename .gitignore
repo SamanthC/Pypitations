@@ -129,8 +129,4 @@ dmypy.json
 .pyre/
 
 others
-data/mitbih_train.csv
-data/ptbdb_normal.csv
-data/ptbdb_abnormal.csv
-data/mitbih_test.csv
-data/tab_article.csv
+data
