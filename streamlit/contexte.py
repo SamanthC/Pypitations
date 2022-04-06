@@ -48,7 +48,7 @@ def contexte():
     
      # Traitement actuel des données
     st.subheader("Des bases de données conséquentes et accessibles")
-    st.markdown("Les hôpitaux ont constitué depuis de nombresues années des bases de données ECG importantes où chaque ECG a été annoté par plusieurs spécialistes.")
+    st.markdown("Les hôpitaux ont constitué depuis de nombreuses années des bases de données ECG importantes où chaque ECG a été annoté par plusieurs spécialistes.")
     st.markdown("Les bases de données du MIT-BIH Arrhythmia et du PTB sont **une source d'apprentissage rêvée pour des Datas Scientists**.")
     st.markdown("Ces bases de données ont déjà fait l'objet d'études de classification à l'aide de la Data Science.")
     

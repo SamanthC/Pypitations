@@ -10,7 +10,7 @@ def main():
     
     menu_list = ["Le projet PyPitations", 
                  "Exploration des données", 
-                 "Modelisation", 
+                 "Modélisation", 
                  "Démonstration", 
                  "Conclusions et perspectives", 
                  "Etat de l'art et bibliographie"]

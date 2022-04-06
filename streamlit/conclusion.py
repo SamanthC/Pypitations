@@ -3,7 +3,7 @@ import streamlit as st
 def conclusion():
     st.header("Conclusions et perspectives")
 
-    st.subheader("Le projet nous a permis d’aborder différentes aspects liés à la classification de signaux temporels :")
+    st.subheader("Le projet nous a permis d’aborder différents aspects liés à la classification de signaux temporels :")
     st.markdown("- Analyse")
     st.markdown("- Traitement de signaux")
     st.markdown("- Modélisation")
@@ -23,8 +23,8 @@ def conclusion():
     st.markdown("- Modification des hyperparamètres des modèles déjà testés")
     st.markdown("- Ajout des couches intermédiaires de convolution et de pooling dans les modèles CNN")
     st.markdown("- Changement de filtres pour le preprocessing CWT")
-    st.markdown("Test d’autres modèles pré-entraînés pour le transfer learning")
-    st.markdown("Test d’approche hybride de feature extraction")
+    st.markdown("- Test d’autres modèles pré-entraînés pour le transfer learning")
+    st.markdown("- Test d’approche hybride de feature extraction")
     st.write(
     """
     \n
