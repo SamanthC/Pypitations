@@ -24,8 +24,8 @@ streamlit run streamlit/app.py
 ## Pour déployer l'api dans un cluster k8s
 
 Avec minikube:
-'''
+```
 minikube start
 bash api/k8s/setup.sh
-'''
+```
 
