@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/mon_volume
   api:
-    image: samanthchinta/datascientest-proj:3.0.0
+    image: samanthchinta/datascientest-proj:4.0.0
     container_name: api
     volumes:
       - .:/mon_volume
