@@ -12,7 +12,7 @@ def biblio():
     \n
     """
     )
-    st.markdown("Ces sujets font et feront encore l’objet de progrès.")
+    st.markdown("Le sujet de la classification des ECGs a fait l'objet de nombreuses publications et reste toujours d'actualité.")
     st.write(
     """
     \n
@@ -35,19 +35,29 @@ def biblio():
     fig.tight_layout()
     fig = plt.gcf()
     st.pyplot(fig)
-    st.markdown("<h4 style='text-align: center;'>Figure : Performances des algorithmes de classification d'ECGs.</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center;'>Performances des algorithmes de classification d'ECGs (Liu et al., 2020).</h4>", unsafe_allow_html=True)
     st.write(
     """
     \n
     """
     )
 
-    st.markdown("Le challenge du temps réel est un compromis entre précision du résultat et la rapidité de son obtention.")
+    st.markdown("Le challenge du temps réel est un compromis entre la précision du résultat et la rapidité de son obtention.")
     st.dataframe(tab_doc)
-    st.markdown("<h4 style='text-align: center;'>Table : Tableau récapitulatif des avancées sur le sujet.</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center;'>Tableau récapitulatif des avancées sur le sujet.</h4>", unsafe_allow_html=True)
     st.write(
     """
     \n
     """
     )
-    st.markdown("Merci pour votre attention !")
+    st.write(
+    """
+    \n
+    """
+    )
+    st.markdown("<h1 style='text-align: center;'>Merci pour votre attention !</h1>", unsafe_allow_html=True)
+    st.write(
+    """
+    \n
+    """
+    )

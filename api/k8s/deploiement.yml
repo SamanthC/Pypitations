@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: projet-deploiement
+spec:
+   replicas: 3
+   selector:
+      matchLabels:
+         app: proj-api
+   template:
+      metadata:
+         labels:
+            app: proj-api
+      spec:
+         containers:
+         - name: api
+           image: samanthchinta/datascientest-proj:3.0.0
