@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  auth:
+    image: samanthchinta/datascientest-proj_test_auth:3.0.0
+    volumes:
+      - .:/mon_volume
+
+  index:
+    image: samanthchinta/datascientest-proj_test_index:3.0.0
+    volumes:
+      - .:/mon_volume
+  api:
+    image: samanthchinta/datascientest-proj:3.0.0
+    container_name: api
+    volumes:
+      - .:/mon_volume
