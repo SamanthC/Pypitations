@@ -13,7 +13,8 @@ Le projet s'est donc articulé comme suit :
 - la définition d'une stratégie
 - l'utilisation de différents modèles d'apprentissage (machine learning, deep learning, transfer learning)
 - l'analyse des résultats des classifications
-- la synthèse des travaux (code, rapport, présentation) et les perspectives du projet
+- la création d'une API pour requêter les modèles sur le dataset MIT BIH test (seuls les algos de regression logistique et SVM seront disponibles pour test)
+- le déploiement de cette API dans un cluster Kubernetes
 
 ## Pour exécuter le rapport streamlit
 
